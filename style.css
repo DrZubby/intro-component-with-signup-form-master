@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        rgba(243, 65, 65, 0.7),
+        rgba(243, 65, 65, 0.7)   
+    ),
+    url(images/bg-intro-desktop.png);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 15%;
+}
+
+#above-form {
+    background-color: hsl(248, 32%, 49%);
+    padding: 1.4em;
+    font-weight: 300;
+    color: whitesmoke;
+    font-size: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 5px 1px 1px hsl(0, 51%, 61%);
+}
+
+#white-bold {
+    font-weight: 600;
+}
+
+form {
+    background-color: whitesmoke;
+    width: 33vw;
+    border-radius: 8px;
+    max-height: 80vh;
+    padding-bottom: 1em;
+    padding-top: 0em;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 5px 1px 1px hsl(0, 51%, 61%);
+}
+
+input {
+    width: 100%;
+    padding: 1.3em;
+    appearance: none;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.invalid {
+    background-position: left 29em top 1em;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    position: relative;
+    border: 1px solid red;
+}
+
+.error-message {
+    font-size: 9px;
+    font-weight: 400;
+    padding-left: 23em;
+    color: red;
+}
+
+ul {
+    list-style: none;
+    padding: 1.5em 1.5em 1em 1.5em;
+}
+
+li {
+    padding: .5em;
+}
+
+button {
+    width: 100%;
+    padding: 1.3em;
+    border-style: none;
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: whitesmoke;
+    box-shadow: 0px 4px 2px 0px hsl(154, 59%, 35%);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(154, 65%, 65%);
+    box-shadow: 0px 4px 2px 0px hsl(154, 59%, 51%);
+}
+
+
+#below-form {
+    margin-top: .1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    font-size: 10px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#bold-red {
+    font-weight: 700;
+    color: hsl(0, 100%, 74%);
+}
+
+.aside {
+    margin-right: 4em;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1;
+}
+
+#left {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: left;
+}
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+     font-weight: 500;
+    }
