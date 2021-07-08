@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-  
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 </head>
+
 <body>
 
   <div class="container">
-    <div class="aside">
-      <h1>
-        Learn to code by watching others
-      <h1>
+    <div class="article">
+          <h1>
+            Learn to code by watching others
+          <h1>
 
-      <p id="left">
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable.
-      </p> 
+          <p id="left">
+            See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+            but understanding how developers think is invaluable.
+          </p>
     </div>
 
     <div>
-      <div id="above-form"><span id="white-bold">Try it free 7 days</span> then $20/mo. thereafter</div>
-      <form>
-        <ul>
-          <li>
+        <div id="above-form"><span id="white-bold">Try it free 7 days</span> then $20/mo. thereafter</div>
+
+        <form action="#" method="GET">
+          <div class="form-controls">
             <input type="text" name="first-name" autocomplete="name" id="first-name" placeholder="First Name">
-            <span class="error-message"></span>
-          </li>
+            <img src="/images/icon-error.svg" alt="">
+            <span class="error-message">this field cannot be empty</span>
+          </div>
 
-          <li>
+          <div class="form-controls">
             <input type="text" name="last-name" id="last-name" placeholder="Last Name">
-            <span class="error-message"></span>
-          </li>
+            <img src="/images/icon-error.svg" alt="">
+            <span class="error-message">this field cannot be empty</span>
+          </div>
 
-          <li>
+          <div class="form-controls">
             <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="email">
-            <span class="error-message"></span>
-          </li>
+            <img src="/images/icon-error.svg" alt="">
+            <span class="error-message">this field cannot be empty</span>
+          </div>
 
-          <li>
-            <input type="password" name="password" id="password" placeholder="Password" >
-            <span class="error-message"></span>
-          </li>
+          <div class="form-controls">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <img src="/images/icon-error.svg" alt="">
+            <span class="error-message">this field cannot be empty</span>
+          </div>
 
-          <li>
+          <div class="form-controls">
             <button type="submit">Claim your free trial</button>
-          </li>
+          </div>
 
-          <li>
-            <p id="below-form">
+          <div id="below-form">
             By clicking the button, you are agreeing to our <span id="bold-red">Terms and Services</span>
-            </p>
-          </li>
-        </ul>
+          </div>
       </form>
     </div>
   </div>
-  
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/DrZubby">Dr. Zubby</a>.
     </p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.s"></script>
 </body>
+
 </html>

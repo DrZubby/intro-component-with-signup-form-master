@@ -1,7 +1,7 @@
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
-const email =  document.querySelector("#email");
-const password =  document.querySelector("#password");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
 const submit = document.querySelector("button");
 
@@ -19,9 +19,9 @@ function displayError(inputType, message, spanText) {
     } else {
         spanText.textContent = `${message} cannot be empty`
     }
-        //inputType example = firstName
-        //message example = "first name"
-        //spanText example = firstNameError
+    //inputType example = firstName
+    //message example = "first name"
+    //spanText example = firstNameError
 }
 
 function displaySuccess(spanText, inputType) {
@@ -30,14 +30,16 @@ function displaySuccess(spanText, inputType) {
 }
 
 function validateEmail() {
- if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form.email.value))
-  {
-    return true;
-  } else {
-      return false;
-  }
+    console.log("I am typing")
+    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form.email.value)) {
+        console.log(form.email.value, " the email is correct");
+        return true
+    } else {
+        console.log(form.email.value, " the email is wrong")
+        return false;
+    }
 }
-form.addEventListener("submit", (e)=> {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (firstName.value === "") {
@@ -54,7 +56,7 @@ form.addEventListener("submit", (e)=> {
 
     if (email.value === "") {
         displayError(email, "email", emailSpan)
-    } else if (validateEmail === false) {
+    } else if (validateEmail() === false) {
         spanText.textContent = "please type in a valid email address";
     } else {
         displaySuccess(emailSpan, email)

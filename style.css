@@ -15,12 +15,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 3% 15%;
+    margin: 5% 17%;
 }
 
 #above-form {
     background-color: hsl(248, 32%, 49%);
-    padding: 1.4em;
+    padding: 1.3em;
     font-weight: 300;
     color: whitesmoke;
     font-size: 12px;
@@ -31,58 +31,55 @@ body {
 }
 
 #white-bold {
-    font-weight: 600;
+    font-weight: 800;
 }
 
 form {
+    padding: 2em 2em 0em 2em;
+    margin-top: 1.2em;
     background-color: whitesmoke;
-    width: 33vw;
+    width: 32vw;
     border-radius: 8px;
-    max-height: 80vh;
-    padding-bottom: 1em;
-    padding-top: 0em;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0px 5px 1px 1px hsl(0, 51%, 61%);
 }
 
 input {
+    position: relative;
+    margin-bottom: 0em;
     width: 100%;
-    padding: 1.3em;
-    appearance: none;
+    padding: 1.2em;
     border-radius: 5px;
     border: 1px solid lightgray;
     font-size: 12px;
     font-weight: 700;
 }
 
+
+img {
+    visibility: hidden;
+    position: absolute;
+    right: 21vw;
+    margin-top: -2em;
+    max-width: 3vh;
+}
+
 .invalid {
-    background-position: left 29em top 1em;
-    background-image: url(images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-size: 3vh;
-    position: relative;
     border: 1px solid red;
 }
 
 .error-message {
+    visibility: ;
+    margin-left: 18vw;
     font-size: 9px;
     font-weight: 400;
-    padding-left: 23em;
     color: red;
-}
-
-ul {
-    list-style: none;
-    padding: 1.5em 1.5em 1em 1.5em;
-}
-
-li {
-    padding: .5em;
 }
 
 button {
     width: 100%;
-    padding: 1.3em;
+    padding: 1.2em;
+    margin-bottom: 1em;
     border-style: none;
     background-color: hsl(154, 59%, 51%);
     border-radius: 5px;
@@ -99,13 +96,18 @@ button:hover {
     box-shadow: 0px 4px 2px 0px hsl(154, 59%, 51%);
 }
 
+button:active {
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: 0px 4px 2px 0px hsl(154, 59%, 51%);
+}
+
 
 #below-form {
-    margin-top: .1em;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
     margin-bottom: 1em;
     font-size: 10px;
     font-weight: 300;
+    color:hsl(246, 25%, 77%);
     width: 100%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -116,7 +118,8 @@ button:hover {
     color: hsl(0, 100%, 74%);
 }
 
-.aside {
+.article {
+    width: 32vw;
     margin-right: 4em;
     color: whitesmoke;
     font-weight: bold;
@@ -126,16 +129,17 @@ button:hover {
 
 h1 {
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1;
 }
 
 #left {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
     text-align: left;
 }
+
 
 .attribution { 
     font-size: 13px; 
