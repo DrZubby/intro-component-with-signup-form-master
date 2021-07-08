@@ -46,6 +46,7 @@ form {
 }
 
 input {
+    position: relative;
     width: 100%;
     padding: 1.3em;
     appearance: none;
@@ -60,7 +61,7 @@ input {
     background-image: url(images/icon-error.svg);
     background-repeat: no-repeat;
     background-size: 3vh;
-    position: relative;
+    position: absolute;
     border: 1px solid red;
 }
 
