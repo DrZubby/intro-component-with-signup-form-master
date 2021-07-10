@@ -10,7 +10,7 @@ body {
     url(images/bg-intro-desktop.png);
 }
 
-.container {
+main {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -161,7 +161,7 @@ h1 {
 }
 
 @media screen and (max-width: 1090px) {
-    .container {
+    main {
         margin: 5% 14%;
     }
 
@@ -185,7 +185,7 @@ h1 {
 }
 
 @media screen and (max-width: 945px) {
-    .container {
+    main {
         margin: 5% 10%;
     }
 
@@ -228,7 +228,7 @@ h1 {
 }
 
 @media screen and (max-width: 750px) {
-    .container {
+    main {
         flex-direction: column;
     }
 
