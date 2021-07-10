@@ -4,13 +4,20 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 
 const submit = document.querySelector("button");
-
-const firstNameSpan = document.querySelector("#first-name + .error-message");
-const lastNameSpan = document.querySelector("#last-name + .error-message");
-const emailSpan = document.querySelector("#email + .error-message");
-const passwordSpan = document.querySelector("#password + .error-message");
-
 const form = document.querySelector("form");
+
+const firstNameSpan = document.querySelector("#first-name + img + .error-message");
+const lastNameSpan = document.querySelector("#last-name + img + .error-message");
+const emailSpan = document.querySelector("#email + img +  .error-message");
+const passwordSpan = document.querySelector("#password + img + .error-message");
+
+
+function displayErrorImage(error) {
+    document.querySelector("#" + error + "+ img").style.visibility = "visible";
+
+    //error example = "first-name"
+    //document.querySelector("#first-name + img").style.visibility("visible")
+}
 
 function displayError(inputType, message, spanText) {
     inputType.classList.add("invalid");
@@ -24,14 +31,15 @@ function displayError(inputType, message, spanText) {
     //spanText example = firstNameError
 }
 
-function displaySuccess(spanText, inputType) {
+function displaySuccess(spanText, inputType, error) {
     spanText.textContent = "";
     inputType.classList.remove("invalid");
+    document.querySelector("#" + error + "+ img").style.visibility = "hidden";
 }
 
 function validateEmail() {
     console.log("I am typing")
-    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form.email.value)) {
+    if (email.value.matches = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
         console.log(form.email.value, " the email is correct");
         return true
     } else {
@@ -39,36 +47,59 @@ function validateEmail() {
         return false;
     }
 }
+
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (firstName.value === "") {
-        displayError(firstName, "First name", firstNameSpan)
+        displayError(firstName, "First name", firstNameSpan);
+        displayErrorImage("first-name")
     } else {
-        displaySuccess(firstNameSpan, firstName)
+        displaySuccess(firstNameSpan, firstName, "first-name")
     }
 
     if (lastName.value === "") {
-        displayError(lastName, "Last name", lastNameSpan)
+        displayError(lastName, "Last name", lastNameSpan);
+        displayErrorImage("last-name")
     } else {
-        displaySuccess(lastNameSpan, lastName)
+        displaySuccess(lastNameSpan, lastName, "last-name")
     }
 
     if (email.value === "") {
-        displayError(email, "email", emailSpan)
+        displayError(email, "email", emailSpan);
+        displayErrorImage("email")
     } else if (validateEmail() === false) {
-        spanText.textContent = "please type in a valid email address";
+        spanText.textContent = "Looks like this is not an email";
     } else {
-        displaySuccess(emailSpan, email)
+        displaySuccess(emailSpan, email, "email")
     }
 
     if (password.value === "") {
-        displayError(password, "Password", passwordSpan)
+        displayError(password, "Password", passwordSpan);
+        displayErrorImage("password")
     } else if (password.value.length < 6) {
-        spanText.textContent = "password is too short. it should be at least 6 characters";
+        spanText.textContent = "Password is too short. it should be at least 6 characters";
     } else if (password.value.length > 15) {
-        spanText.textContent = "password is too long. it should not be more than 15 characters";
+        spanText.textContent = "Password is too long. it should not be more than 15 characters";
     } else {
-        displaySuccess(passwordSpan, password)
+        displaySuccess(passwordSpan, password, "password")
     }
+})
+
+window.addEventListener("load", ()=> {
+    let width = window.innerWidth;
+    let errorMargin = document.querySelectorAll(".error-message");
+    for (let i=0; i<errorMargin.length; i++) {
+    if (width <= 1371) {
+        errorMargin[i].style.marginLeft = "25em"
+    } else if (width <= 1300) {
+        errorMargin[i].style.marginLeft = "0em"
+    } else if (width <= 1161) {
+        errorMargin[i].style.marginLeft = "0em";
+        errorMargin[i].style.marginRight = ".5em"
+    } else {
+        errorMargin[i].style.marginLeft = "28em"
+    }
+}
 })
