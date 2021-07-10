@@ -91,15 +91,12 @@ window.addEventListener("load", ()=> {
     let width = window.innerWidth;
     let errorMargin = document.querySelectorAll(".error-message");
     for (let i=0; i<errorMargin.length; i++) {
-    if (width <= 1371) {
-        errorMargin[i].style.marginLeft = "25em"
-    } else if (width <= 1300) {
+    if (width <= 1360) {
+        errorMargin[i].style.marginLeft = "20em"
+    } else if (width <= 1230) {
         errorMargin[i].style.marginLeft = "0em"
-    } else if (width <= 1161) {
-        errorMargin[i].style.marginLeft = "0em";
-        errorMargin[i].style.marginRight = ".5em"
     } else {
-        errorMargin[i].style.marginLeft = "28em"
+        errorMargin[i].style.marginLeft = "24em"
     }
 }
 })

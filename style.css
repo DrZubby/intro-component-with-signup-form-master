@@ -71,13 +71,14 @@ img {
 .error-message {
     display: flex;
     width: 75%;
-    margin-left: 27em;
-    margin-right: 1em;
+    font-style: italic;
+    text-align: right;
+    margin-left: 24em;
     margin-top: 0em;
     padding-bottom: 1.5em;
     padding-top: 0em;
-    font-size: .5em;
-    font-weight: 600;
+    font-size: .6em;
+    font-weight: 500;
     color: red;
 }
 
@@ -202,75 +203,73 @@ h1 {
     }
 }
 
-@media screen and (max-width: 885px) {
-    .container {
-        margin: 5% 8%;
+@media screen and (max-width: 888px) {
+    .article {
+        margin-bottom: 1.5em;
+        width: 40vw;
+        margin-left: 3em;
     }
-
 
     form {
-        width: 46vw;
-    }
-
-    .article {
-        width: 38vw;
+        width: 45vw;
     }
 
     img {
-        right: 15vw;
+        right: 16vw;
     }
+
+    .error-message {
+        font-size: .5em;
+        font-weight: 600;
+    }
+
+
+
 }
 
-@media screen and (max-width: 885px) {
+@media screen and (max-width: 750px) {
     .container {
-        margin: 5% 8%;
         flex-direction: column;
     }
 
     .article {
-        margin-bottom: 1.5em;
-        width: 80vw;
-        margin-left: 3em;
+        width: 70vw;
     }
 
-    #left {
-        font-size: 16px;
+    .error-message {
+        font-size: .7em;
+        font-weight: 600;
     }
 
     form {
-        width: 80vw;
-    }
-
-    img {
-        right: 18vw;
+        width: 70vw;
     }
 
 
-}
-
-@media screen and (max-width: 480px) {
     img {
         right: 22vw;
     }
 
-    .error-message {
-        font-size: .4em;
-        font-weight: 700;
-
-    }
-
-
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
     .article {
-        width: 95vw;
+        width: 85vw;
+    }
+
+    .error-message {
+        font-size: .5em;
+        font-weight: 600;
     }
 
     form {
-        width: 95vw;
+        width: 85vw;
     }
 
+
+    img {
+        right: 16vw;
+    }
 
 }
 
